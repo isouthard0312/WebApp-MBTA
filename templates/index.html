@@ -2,9 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Amazing app to help you find nearest MBTA station</title>
+    <title>MBTA-Helper</title>
+    <link rel="stylesheet" href="mystyle.css">
 </head>
+<style>
+    input[type=text], select {
+      width: 50%;
+      padding: 14px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-left: 170px;
+    }
+    
+    input[type=submit] {
+      width: 20%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 275px;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+      
+    }
+    
+    div {
+      border-radius: 11px;
+      width: 45%;
+      background-color: #f2f2f2;
+      padding: 2px;
+      margin-left: 400px;
+      margin-top: 50px;
+    }
+    #cool {
+        margin-left: 550px;
+        width: 60%;
+        background-color: transparent;
+    }
+    p {
+      text-align: center;
+      margin-right: 20px;
+      font-size: large;
+    }
+    h1{
+      text-align: center;
+    }
+    </style>    
 <body>
+    <h1>Hello!</h1>
+    <p> Please enter your Location and the MBTA-Helper will return the MBTA station nearest to you: </p>
+    
+    <div>
+      <!-- {% block content %}
+        {% with messages = get_flashed_messages() %}
+          {% if results %}
+              {% for place_name in form %}
+                <P>{{ find_stop_near() }}</P>
+              {% endfor %}
+          {% endif %}
+        {% endwith %} -->
 
+    <form action = 'result' method = 'get'>
+        <input type = 'text' id = 'loca' name = 'loca' placeholder="enter your location here in the form (city,state)">
+        <input type="submit" value="Submit" name ='submit'>
+    </form>
+</div>
+    
 </body>
 </html>
+{% endblock %}
